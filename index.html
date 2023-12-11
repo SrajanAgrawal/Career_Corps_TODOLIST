@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <label for="task">Add Your Task</label>
+      <div class="input-field">
+        <input type="text" id="input-field" />
+        <i
+          class="fa fa-plus"
+          style="font-size: 36px"
+          onclick="addTask()"
+          id="myBtn"
+        ></i>
+      </div>
+      <div id="emptyTaskWarnMessage"></div>
+      <!-- assgin the priorities  -->
+      <div class="priority">
+        <div class="red-square">
+          <i
+            class="fa fa-check-square"
+            style="font-size: 24px; color: red"
+            id="red-square"
+          ></i>
+          High Priority
+        </div>
+        <div class="blue-square">
+          <i
+            class="fa fa-square"
+            style="font-size: 24px; color: blue"
+            id="blue-square"
+          ></i>
+          Medium Priority
+        </div>
+        <div class="yellow-square">
+          <i
+            class="fa fa-square"
+            style="font-size: 24px; color: rgb(222, 222, 39)"
+            id="yellow-square"
+          ></i>
+          Low Priority
+        </div>
+      </div>
+    </div>
+
+    <!-- All High Priority Task will be shown here -->
+    <!-- <div class="grand_parent"> -->
+    <div class="task-list">
+      <!-- high task list  -->
+      <div class="high-task-list">
+        <div class="task-list-message" style="color: red">
+          Consistency beats intensity!
+        </div>
+        <ul id="allhightask"></ul>
+      </div>
+      <!-- medium task list -->
+      <div class="medium-task-list">
+        <div class="task-list-message" style="color: blue">
+          Small efforts, big rewards!
+        </div>
+        <ul id="allmediumtask"></ul>
+      </div>
+      <!-- low task list -->
+      <div class="low-task-list">
+        <div class="task-list-message" style="color: rgb(222, 222, 39)">
+          Start now, reap later!
+        </div>
+        <ul id="alllowtask"></ul>
+      </div>
+    </div>
+    <!-- </div> -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
